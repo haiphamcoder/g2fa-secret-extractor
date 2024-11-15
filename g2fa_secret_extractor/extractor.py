@@ -18,16 +18,8 @@ def extract_secret_key(uri: str):
         secret_key = b32encode(otp.secret).decode("utf-8").replace("=", "")
         name = otp.name
         issuer = otp.issuer
-        algorithm = otp.algorithm
-        digits = otp.digits
-        otp_type = otp.type
-        counter = otp.counter
         
         print(f"Issuer: {issuer}")
         print(f"Name: {name}")
         print(f"Secret Key: {secret_key}")
-        print(f"Algorithm: {algorithm}")
-        print(f"Digits: {digits}")
-        print(f"Type: {otp_type}")
-        print(f"Counter: {counter}")
         print()
